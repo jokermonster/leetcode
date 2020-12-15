@@ -13,7 +13,7 @@ public class bufenpaixu_16_6 {
     从左往右走一遍确定下界，从右往左走一遍确定上界
      */
     public static void main(String[] args) {
-int[] array={1,2,4,7,10,11,7,12,6,7,16,18,19};
+int[] array={1,2,4,7,10,11,7,12,6,7,16,18,88};
 int[] re=subSort(array);
         System.out.println(re[0]);
         System.out.println(re[1]);
