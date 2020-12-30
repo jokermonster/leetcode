@@ -24,11 +24,10 @@ public class leetcode_1046 {
 最后选出 1 和 1，得到 0，最终数组转换为 [1]，这就是最后剩下那块石头的重量。
      */
     public int lastStoneWeight(int[] stones) {//大顶堆
-        PriorityQueue<Integer> pq = new PriorityQueue<Integer>((a, b) -> b - a);//优先级队列
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>((a, b) -> b - a);//优先级队列，逆序排列，大顶堆
         for (int stone : stones) {
             pq.offer(stone);
         }
-
         while (pq.size() > 1) {
             int a = pq.poll();
             int b = pq.poll();
