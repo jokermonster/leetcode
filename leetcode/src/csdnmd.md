@@ -180,7 +180,7 @@ Note right of 王五: 李四想了很长时间, 文字太长了<br/>不适合放
 这将产生一个流程图。:
 
 ```mermaid
-graph LR
+graph LRdd
 A[长方形] -- 链接 --> B((圆))
 A --> C(圆角长方形)
 B --> D{菱形}
