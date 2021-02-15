@@ -26,7 +26,6 @@ nums = [1, 2, 3]
 数组中不存在满足此条件的中心索引。
      */
     public int pivotIndex(int[] nums) {
-        public int pivotIndex ( int[] nums){
             int sum = 0, temp = 0;
             int re = 0, flag = 0;
             for (int i = 0; i < nums.length; i++) {
@@ -48,4 +47,4 @@ nums = [1, 2, 3]
             return flag == 1 ? re : -1;
         }
     }
-}
+
