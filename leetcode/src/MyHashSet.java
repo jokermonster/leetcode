@@ -36,7 +36,7 @@ myHashSet.contains(2); // 返回 False ，（已移除）
      */
     /** Initialize your data structure here. */
     public MyHashSet() {
-        for (int i=0;i<13;i++)
+        for (int i=0;i<769;i++)
         {
             LinkedList<Integer>temp=new LinkedList<>();
             hashSet.add(temp);
@@ -45,17 +45,17 @@ myHashSet.contains(2); // 返回 False ，（已移除）
 
     public void add(int key) {
         if (!contains(key))
-            hashSet.get(key%13).add(key);
+            hashSet.get(key%769).add(key);
     }
 
     public void remove(int key) {
-        if ( hashSet.get(key%13).contains(key))
+        if ( hashSet.get(key%769).contains(key))
         {
-            for (int i=0;i<hashSet.get(key%13).size();i++)
+            for (int i=0;i<hashSet.get(key%769).size();i++)
             {
-                if (hashSet.get(key%13).get(i)==key)
+                if (hashSet.get(key%769).get(i)==key)
                 {
-                    hashSet.get(key%13).remove(i);
+                    hashSet.get(key%769).remove(i);
                 }
             }
         }
@@ -63,7 +63,7 @@ myHashSet.contains(2); // 返回 False ，（已移除）
 
     /** Returns true if this set contains the specified element */
     public boolean contains(int key) {
-        return hashSet.get(key%13).contains(key);
+        return hashSet.get(key%769).contains(key);
     }
 }
 /**
