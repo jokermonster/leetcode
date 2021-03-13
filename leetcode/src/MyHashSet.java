@@ -56,6 +56,7 @@ myHashSet.contains(2); // 返回 False ，（已移除）
                 if (hashSet.get(key%769).get(i)==key)
                 {
                     hashSet.get(key%769).remove(i);
+                    return;
                 }
             }
         }
