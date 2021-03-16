@@ -8,6 +8,7 @@ public class union_model {
         if (parent[index] != index) {
             parent[index] = find(parent, parent[index]);
         }
+
         return parent[index];
     }
 }
