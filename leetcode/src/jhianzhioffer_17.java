@@ -15,7 +15,20 @@ public class jhianzhioffer_17 {
     @Test
     public void te()
     {
-        System.out.println(Arrays.toString(printNumbers(2)));
+        leetcode_236competion obj =new leetcode_236competion(3,1);
+        obj.addElement(3);        // 当前元素为 [3]
+        obj.addElement(1);        // 当前元素为 [3,1]
+       System.out.println(obj.calculateMKAverage());  // 返回 -1 ，因为 m = 3 ，但数据流中只有 2 个元素
+        obj.addElement(10);       // 当前元素为 [3,1,10]
+        System.out.println(obj.calculateMKAverage());  // 最后 3 个元素为 [3,1,10]
+        // 删除最小以及最大的 1 个元素后，容器为 [3]
+        // [3] 的平均值等于 3/1 = 3 ，故返回 3
+        obj.addElement(5);        // 当前元素为 [3,1,10,5]
+        obj.addElement(5);        // 当前元素为 [3,1,10,5,5]
+        obj.addElement(5);        // 当前元素为 [3,1,10,5,5,5]
+        System.out.println(obj.calculateMKAverage());   // 最后 3 个元素为 [5,5,5]
+
+
     }
     public int[] printNumbers(int n) {
      int jie=1;
